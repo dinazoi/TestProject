@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.2 on win32)" generated="20200311 00:57:56.379" rpa="false">
+<suite id="s1" name="Testcases" source="C:\Users\Unknow\PycharmProjects\Testingproject\Tests\Testcases.robot">
+<test id="s1-t1" name="Lease the car through the sign up">
+<kw name="GIVEN Begin web test on local display" library="Common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>@{START_URL}</arg>
+<arg>@{Browser}</arg>
+<arg>1</arg>
+<arg>options=add_argument("--ignore-certificate-errors")</arg>
+</arguments>
+<msg timestamp="20200311 00:57:56.683" level="INFO">Opening browser 'Firefox' to base url 'https://angular.realworld.io/'.</msg>
+<msg timestamp="20200311 00:57:56.713" level="INFO">Firefox driver log is always forced to to: C:\Users\Unknow\PycharmProjects\Testingproject\Results\geckodriver-2.log</msg>
+<status status="PASS" starttime="20200311 00:57:56.682" endtime="20200311 00:58:04.118"></status>
+</kw>
+<kw name="Set Window Size" library="Selenium2Library">
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<arguments>
+<arg>@{WIDTH}</arg>
+<arg>@{HEIGHT}</arg>
+</arguments>
+<status status="PASS" starttime="20200311 00:58:04.118" endtime="20200311 00:58:04.157"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.5 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200311 00:58:04.158" endtime="20200311 00:58:04.158"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="Selenium2Library">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>8 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200311 00:58:04.158" endtime="20200311 00:58:04.661"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200311 00:58:04.661" endtime="20200311 00:58:05.167"></status>
+</kw>
+<status status="PASS" starttime="20200311 00:57:56.682" endtime="20200311 00:58:05.167"></status>
+</kw>
+<kw name="AND As a new user i want to login" library="Article_creation">
+<kw name="I enter to the HP and try to login" library="User_login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@routerlink='/login']</arg>
+</arguments>
+<msg timestamp="20200311 00:58:05.170" level="INFO">Clicking element 'xpath=.//*[@routerlink='/login']'.</msg>
+<status status="PASS" starttime="20200311 00:58:05.169" endtime="20200311 00:58:06.460"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=.//*[@class='text-xs-center']</arg>
+</arguments>
+<status status="PASS" starttime="20200311 00:58:06.460" endtime="20200311 00:58:07.502"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Verifying login page reached</arg>
+</arguments>
+<status status="PASS" starttime="20200311 00:58:07.502" endtime="20200311 00:58:07.503"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@placeholder='Email']</arg>
+<arg>${Email}</arg>
+</arguments>
+<msg timestamp="20200311 00:58:07.504" level="INFO">Typing text 'flashol@mail.com' into text field 'xpath=.//*[@placeholder='Email']'.</msg>
+<status status="PASS" starttime="20200311 00:58:07.503" endtime="20200311 00:58:09.089"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@placeholder='Password']</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20200311 00:58:09.090" level="INFO">Typing text 'Passpro1' into text field 'xpath=.//*[@placeholder='Password']'.</msg>
+<status status="PASS" starttime="20200311 00:58:09.089" endtime="20200311 00:58:10.643"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@type='submit']</arg>
+</arguments>
+<msg timestamp="20200311 00:58:10.644" level="INFO">Clicking element 'xpath=.//*[@type='submit']'.</msg>
+<status status="PASS" starttime="20200311 00:58:10.643" endtime="20200311 00:58:11.894"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>css=a[href='/profile/${login}']</arg>
+</arguments>
+<status status="PASS" starttime="20200311 00:58:11.894" endtime="20200311 00:58:12.981"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: User successfully logged in</arg>
+</arguments>
+<status status="PASS" starttime="20200311 00:58:12.981" endtime="20200311 00:58:12.982"></status>
+</kw>
+<status status="PASS" starttime="20200311 00:58:05.169" endtime="20200311 00:58:12.982"></status>
+</kw>
+<status status="PASS" starttime="20200311 00:58:05.168" endtime="20200311 00:58:12.982"></status>
+</kw>
+<kw name="AND As a new user i want to create article" library="Article_creation">
+<kw name="Article creation" library="Article">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=a[href='/editor']</arg>
+</arguments>
+<msg timestamp="20200311 00:58:12.985" level="INFO">Clicking element 'css=a[href='/editor']'.</msg>
+<status status="PASS" starttime="20200311 00:58:12.985" endtime="20200311 00:58:14.269"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=.//*[@placeholder='Article Title']</arg>
+</arguments>
+<status status="PASS" starttime="20200311 00:58:14.269" endtime="20200311 00:58:15.311"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Article creation form reached</arg>
+</arguments>
+<status status="PASS" starttime="20200311 00:58:15.311" endtime="20200311 00:58:15.312"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@placeholder='Article Title']</arg>
+<arg>Something</arg>
+</arguments>
+<msg timestamp="20200311 00:58:15.313" level="INFO">Typing text 'Something' into text field 'xpath=.//*[@placeholder='Article Title']'.</msg>
+<status status="PASS" starttime="20200311 00:58:15.312" endtime="20200311 00:58:16.881"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@formcontrolname='description']</arg>
+<arg>Article about something</arg>
+</arguments>
+<msg timestamp="20200311 00:58:16.881" level="INFO">Typing text 'Article about something' into text field 'xpath=.//*[@formcontrolname='description']'.</msg>
+<status status="PASS" starttime="20200311 00:58:16.881" endtime="20200311 00:58:18.444"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@formcontrolname='body']</arg>
+<arg>Article about something</arg>
+</arguments>
+<msg timestamp="20200311 00:58:18.445" level="INFO">Typing text 'Article about something' into text field 'xpath=.//*[@formcontrolname='body']'.</msg>
+<status status="PASS" starttime="20200311 00:58:18.444" endtime="20200311 00:58:20.021"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@placeholder='Enter tags']</arg>
+<arg>SometestTags</arg>
+</arguments>
+<msg timestamp="20200311 00:58:20.022" level="INFO">Typing text 'SometestTags' into text field 'xpath=.//*[@placeholder='Enter tags']'.</msg>
+<status status="PASS" starttime="20200311 00:58:20.022" endtime="20200311 00:58:21.582"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: All data added to article creation form</arg>
+</arguments>
+<status status="PASS" starttime="20200311 00:58:21.582" endtime="20200311 00:58:21.583"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@type='button']</arg>
+</arguments>
+<msg timestamp="20200311 00:58:21.584" level="INFO">Clicking element 'xpath=.//*[@type='button']'.</msg>
+<status status="PASS" starttime="20200311 00:58:21.583" endtime="20200311 00:58:22.825"></status>
+</kw>
+<status status="PASS" starttime="20200311 00:58:12.984" endtime="20200311 00:58:22.825"></status>
+</kw>
+<status status="PASS" starttime="20200311 00:58:12.983" endtime="20200311 00:58:22.825"></status>
+</kw>
+<kw name="THEN As a new user i want to verify created article" library="Article_creation">
+<kw name="Verifying article created" library="Article">
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@class='container']/h1</arg>
+</arguments>
+<assign>
+<var>${get_article}</var>
+</assign>
+<msg timestamp="20200311 00:58:24.189" level="INFO">${get_article} = Something</msg>
+<status status="PASS" starttime="20200311 00:58:22.828" endtime="20200311 00:58:24.189"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${get_article}' == 'Something'</arg>
+<arg>log to console</arg>
+<arg>INFO: Article correct</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>INFO: Wrong article</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Article correct</arg>
+</arguments>
+<status status="PASS" starttime="20200311 00:58:24.190" endtime="20200311 00:58:24.192"></status>
+</kw>
+<status status="PASS" starttime="20200311 00:58:24.189" endtime="20200311 00:58:24.192"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>@{START_URL}</arg>
+</arguments>
+<msg timestamp="20200311 00:58:24.193" level="INFO">Opening url 'https://angular.realworld.io/'</msg>
+<status status="PASS" starttime="20200311 00:58:24.193" endtime="20200311 00:58:24.965"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Home Page reached</arg>
+</arguments>
+<status status="PASS" starttime="20200311 00:58:24.965" endtime="20200311 00:58:24.965"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[text()=' Global Feed ']</arg>
+</arguments>
+<msg timestamp="20200311 00:58:24.966" level="INFO">Clicking element 'xpath=.//*[text()=' Global Feed ']'.</msg>
+<status status="PASS" starttime="20200311 00:58:24.966" endtime="20200311 00:58:26.205"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${get_article}</arg>
+</arguments>
+<status status="PASS" starttime="20200311 00:58:26.205" endtime="20200311 00:58:26.826"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Article are posted on the global feed</arg>
+</arguments>
+<status status="PASS" starttime="20200311 00:58:26.826" endtime="20200311 00:58:26.827"></status>
+</kw>
+<status status="PASS" starttime="20200311 00:58:22.827" endtime="20200311 00:58:26.827"></status>
+</kw>
+<status status="PASS" starttime="20200311 00:58:22.827" endtime="20200311 00:58:26.828"></status>
+</kw>
+<doc>As a new user i want to login and create new article
+-- login as a new user
+--- Create new article
+---- Verify new article created</doc>
+<tags>
+<tag>Registration</tag>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" starttime="20200311 00:57:56.681" endtime="20200311 00:58:26.828" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200311 00:57:56.381" endtime="20200311 00:58:26.831"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">Registration</stat>
+<stat pass="1" fail="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Testcases">Testcases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

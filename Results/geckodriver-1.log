@@ -1,0 +1,1 @@
+1583881058338	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "--ignore-certificate-errors" "-foreground" "-no-remote" "-profile" "C:\\Users\\Unknow\\AppData\\Local\\Temp\\rust_mozprofile.YsA5BjmCWTLX"
